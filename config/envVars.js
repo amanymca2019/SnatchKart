@@ -5,9 +5,9 @@ const dotenv = require('dotenv').config({
 });
 
 module.exports = {
-    MongoDbUri: 'mongodb+srv://aman:dummyPassword@onlineshop.xvrfr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
-    StripeApiKey: 'sk_test_51IeEPTSBDInLnMkwWzyoQQtiHYfbgDZyyOwDLlNB7GE43aZFJAL56qe8S781pkECIJscTRnFIuTiyVn1iPXf8ZEO00WWyZp8ym',
-    MailgGunDomain: 'http://localhost:3000/',
-    MailGunApi_Key: 'b5c85100844cf52b188ffffaaf9cabb5-71b35d7e-ba6b1f34',
+    MongoDbUri: process.env.MONGO_DB_URI,
+    StripeApiKey: process.env.STRIPE_API_KEY,
+    MailgGunDomain: process.env.MAILGUN_DOMAIN || 'http://localhost:3000/',
+    MailGunApi_Key: process.env.MAILGUN_API_KEY,
 }
 
