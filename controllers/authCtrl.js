@@ -255,7 +255,7 @@ exports.postResetPassword = (req, res, next) => {
           html: `
             <h1>Here's your password reset link!</h1>
             <nbr></nbr>
-            <p>This is the <a href="http://localhost:3000/set-new-password/${token}">link</a> for reseting your password, if you didn't ask for a password reset don't click it, it will expire in 1 hour.</p>
+            <p>This is the <a href="${process.env.APP_BASE_URL || 'http://localhost:3000'}/set-new-password/${token}">link</a> for reseting your password, if you didn't ask for a password reset don't click it, it will expire in 1 hour.</p>
           `
         });
       })
